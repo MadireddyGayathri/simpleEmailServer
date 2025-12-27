@@ -41,12 +41,8 @@ sequenceDiagram
     WebServer-->>Browser: [messages]
 ```
 
-## How to run (quick)
+How to run 
 
 1. Compile: `del *.class; javac -cp ".;lib/*" *.java`
 2. Start the Web UI + API: `java -cp ".;lib/*" WebServer`
 3. Open browser: `http://localhost:8080` to interact with the UI
-
----
-
-If you want, I can also export the diagram as an image or add an ASCII sequence diagram as a fallback for environments that don't render Mermaid. Which would you prefer? (Mermaid + README entry is ready now.)
