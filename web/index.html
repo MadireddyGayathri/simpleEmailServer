@@ -1,0 +1,66 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Simple Email Server</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <header class="app-header">
+      <h1>Simple Email Server</h1>
+      <div class="header-actions">
+        <span id="headerUser" class="muted">Not signed in</span>
+        <button id="btnLogout" class="hidden">Logout</button>
+      </div>
+    </header>
+
+    <div class="content">
+      <aside class="sidebar" id="auth">
+        <div class="card">
+          <h2>Register</h2>
+          <input id="regEmail" placeholder="Email">
+          <input id="regPass" type="password" placeholder="Password">
+          <button id="btnReg">Register</button>
+        </div>
+
+        <div class="card">
+          <h2>Login</h2>
+          <input id="loginEmail" placeholder="Email">
+          <input id="loginPass" type="password" placeholder="Password">
+          <button id="btnLogin">Login</button>
+        </div>
+      </aside>
+
+      <main class="main-area" id="main" style="display:none;">
+        <div class="compose card">
+          <h3>Compose</h3>
+          <input id="to" placeholder="To">
+          <input id="subject" placeholder="Subject">
+          <div class="compose-actions">
+            <button id="btnMl">Suggest body (ML)</button>
+            <button id="btnSend" class="primary">Send</button>
+          </div>
+          <textarea id="body" rows="6" placeholder="Message body"></textarea>
+        </div>
+
+        <div class="columns">
+          <section id="inbox" class="card">
+            <h3>Inbox <span id="inboxCount" class="badge">0</span></h3>
+            <div id="inboxList"></div>
+          </section>
+
+          <section id="sent" class="card">
+            <h3>Sent <span id="sentCount" class="badge">0</span></h3>
+            <div id="sentList"></div>
+          </section>
+        </div>
+      </main>
+    </div>
+
+    <div id="toast" class="toast hidden"></div>
+    <div id="spinner" class="spinner hidden"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
